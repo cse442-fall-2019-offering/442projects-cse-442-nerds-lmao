@@ -20,3 +20,5 @@ Write 1 or 2 paragraphs describing the completed version of your project. (Devel
 Write 1 or 2 paragraphs describing a typical user of your project and how they would use it."
 
 will fix later.
+
+This is the text file that first person alphabetically will send on Autolab so Alan is gonna submit this before Friday's deadline.
