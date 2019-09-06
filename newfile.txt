@@ -20,9 +20,9 @@ Team Members:
 -Q: "Describe your team's alternate dispute resolution approach. This should be a silly, but simple, way to resolve disputes when your team just cannot agree. Voting is NOT allowed for this, but anything else is okay. If When problems arise, we will expect you to use this."
  A: Rock-Paper-Scissors tournament. RNGesus wins.
 -Q: "Write 1 or 2 paragraphs describing the completed version of your project. (Developing estimates is very, very hard and takes years to do well. These descriptions are only to help your project manager understand your goals and prioritize the work to be done).
- A: Vincent: 8-bit Jojo's Bizzare Adventure that's rouge-like and bullet hell.
+ A: The completed project will be an 8-bit roguelike shooter. The player will play through random generated levels, in which enemies spawn and as the main obstacles in which the player must beat to progress the game. Bosses, which are tougher enemies, will appear and will act as a major roadblock to proceeding to the next level. Graphics and music will consist of 8 bit 2D pixels and 8-bit chiptune respectively. Movement and combat will consist a player character moving along the XY axes, aiming with the cursor and shooting with clicking. The game will feature different characters with various different skills to bring variety to gameplay.
 -Q: "Write 1 or 2 paragraphs describing a typical user of your project and how they would use it."
- A: Our target demographic is people who play/are interested in video games. If the demographic can be entertained/amused by our project/game, then the purpose is already fufilled.
+ A: A typical user of this service will be gamers who wish to enjoy an 8bit roguelike videogame, or people who wish to have fun. They would download it, boot it up, select a character, and use controls to attempt to beat the game.
  
 will fix later.
 
