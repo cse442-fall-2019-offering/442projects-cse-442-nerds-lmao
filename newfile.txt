@@ -20,7 +20,7 @@ Team Members:
 -Q: "Describe your team's alternate dispute resolution approach. This should be a silly, but simple, way to resolve disputes when your team just cannot agree. Voting is NOT allowed for this, but anything else is okay. If When problems arise, we will expect you to use this."
  A: If a dispute arises, we'll most likely be debating on both sides. For example, if there was a debate on which game engine to use, we'd go over the benefits of both game engines and the cons, see which one is applicable to the team and see what can help the team out further with our arguements. 
 -Q: "Write 1 or 2 paragraphs describing the completed version of your project. (Developing estimates is very, very hard and takes years to do well. These descriptions are only to help your project manager understand your goals and prioritize the work to be done).
- A:
+ A: Vincent: 8-bit Jojo's Bizzare Adventure that's rouge-like and bullet hell.
 -Q: "Write 1 or 2 paragraphs describing a typical user of your project and how they would use it."
  A:
  
