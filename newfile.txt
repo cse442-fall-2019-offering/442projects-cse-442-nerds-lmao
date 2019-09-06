@@ -6,7 +6,7 @@ Zennhub repo: https://app.zenhub.com/workspaces/cse-442-nerds-something-5d6ffc38
 
 Team Members:
 -alanalpe@buffalo.edu
--eykim5@buffalo.edu
+-Edward Kim: eykim5@buffalo.edu
 -Sarahpet@buffalo.edu
 -Tracy Zheng: tracyzhe@buffalo.edu
 -vfeng2@buffalo.edu
