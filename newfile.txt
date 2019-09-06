@@ -22,7 +22,7 @@ Team Members:
 -Q: "Write 1 or 2 paragraphs describing the completed version of your project. (Developing estimates is very, very hard and takes years to do well. These descriptions are only to help your project manager understand your goals and prioritize the work to be done).
  A: Vincent: 8-bit Jojo's Bizzare Adventure that's rouge-like and bullet hell.
 -Q: "Write 1 or 2 paragraphs describing a typical user of your project and how they would use it."
- A:
+ A: They wanna play video games. 
  
 will fix later.
 
