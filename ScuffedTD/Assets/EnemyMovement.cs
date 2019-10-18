@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private int wavepointIndex = 0; //which wavepoint the enemy is pursuing
 
     void Start(){
-    	target = WaypointsScript.points[0];
+    	target = WaypointsScript.points[0]; //might have to make deriviations of this script for future unique enemies
     }
 
     void Update(){
