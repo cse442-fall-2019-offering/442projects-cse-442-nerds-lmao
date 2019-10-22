@@ -9,6 +9,7 @@ public class testTurret : MonoBehaviour
     public Transform target;
     public float range = 15f;
     public float fireRate = 1f;
+    public float damage = 1f;
     private float fireCountdown = 0f;
 
     [Header("Unity Setup Fields")]
@@ -30,7 +31,7 @@ public class testTurret : MonoBehaviour
       GameObject nearestEnemy = null;
 
       foreach (GameObject enemy in enemies){
-        float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+        float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
         if (distanceToEnemy < shortestDistance) {
           shortestDistance = distanceToEnemy;
           nearestEnemy = enemy;
@@ -46,8 +47,7 @@ public class testTurret : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
       if (target == null){
         return;
       }
@@ -63,18 +63,17 @@ public class testTurret : MonoBehaviour
 
 
     void Shoot (){
-      /*  GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.getComponent<Bullet>();
+      GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null){
           bullet.Seek(target);
-        } */
+        }
     }
 
     void OnDrawGizmosSelected (){
       Gizmos.color = Color.red;
       Gizmos.DrawWireSphere(transform.position, range);
     }
-    
-}
 
+}
