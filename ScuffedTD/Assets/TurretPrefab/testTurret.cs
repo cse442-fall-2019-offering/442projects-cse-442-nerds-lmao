@@ -21,11 +21,11 @@ public class testTurret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      InvokeRepeating("UpdateTarget", 0f, 0.5f);
+      InvokeRepeating("UpdateTarget", 0f, 0.2f);
     }
 
     void UpdateTarget(){
-      /*GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+      GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
       float shortestDistance = Mathf.Infinity;
       GameObject nearestEnemy = null;
 
@@ -38,10 +38,10 @@ public class testTurret : MonoBehaviour
       }
 
       if (nearestEnemy != null && shortestDistance <= range){
-        target.nearestEnemy.transform;
+        target = nearestEnemy.transform;
       } else {
         target = null;
-      } */
+      }
 
     }
 
@@ -68,14 +68,13 @@ public class testTurret : MonoBehaviour
 
         if (bullet != null){
           bullet.Seek(target);
-        }
+        } */
     }
 
     void OnDrawGizmosSelected (){
       Gizmos.color = Color.red;
       Gizmos.DrawWireSphere(transform.position, range);
     }
-    */
+    
 }
 
-}
