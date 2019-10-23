@@ -8,8 +8,8 @@ public class CameraScaleLevel : MonoBehaviour {
 
   transform.localScale=new Vector3(1,1,1);
 
-  float width=1920;
-  float height=1080;
+  float width= (float)795.42;
+  float height= (float)445.66;
 
 
   float worldScreenHeight=Camera.main.orthographicSize*2f;
