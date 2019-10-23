@@ -9,14 +9,27 @@ public class Shop : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
-    public void PurchaseStandardTurret() {
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+    public void PurchaseHertzTurret()
+    {
+        buildManager.SetTurretToBuild(buildManager.HertzTurretPrefab);
 
     }
 
-    public void PurchaseAnotherTurret()
+    public void PurchaseHughesTurret()
     {
-        buildManager.SetTurretToBuild(buildManager.anotherTurretPrefab);
+        buildManager.SetTurretToBuild(buildManager.HughesTurretPrefab);
+
+    }
+
+    public void PurchaseRudraTurret()
+    {
+        buildManager.SetTurretToBuild(buildManager.RudraTurretPrefab);
+
+    }
+
+    public void PurchaseAlphonceTurret()
+    {
+        buildManager.SetTurretToBuild(buildManager.AlphonceTurretPrefab);
 
     }
 }

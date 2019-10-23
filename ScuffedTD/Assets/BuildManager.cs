@@ -10,9 +10,10 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject standardTurretPrefab;
-    public GameObject anotherTurretPrefab;
-
+    public GameObject HertzTurretPrefab;
+    public GameObject HughesTurretPrefab;
+    public GameObject RudraTurretPrefab;
+    public GameObject AlphonceTurretPrefab;
 
     private GameObject turretToBuild;
 
