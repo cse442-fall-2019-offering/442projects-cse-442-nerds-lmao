@@ -8,14 +8,29 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 11f;
     public float countdown = 11f;
 
-    public Transform enemyPrefab;
+    public Text waveCountDownText;
+    public Text waveNumberText;
+
+    public Transform freshmanEnemyPrefab;
+    public Transform sophmoreEnemyPrefab;
+    public Transform juniorEnemyPrefab;
+    public Transform seniorEnemyPrefab;
     public Transform spawnPoint;
 
 
 
     [SerializeField]
 
-    private int waveNumber = 1;
+    private int waveNumber = 0;
+    Transform[] enemies = new Transform[4];
+
+    void Start() {
+        enemies[0] =freshmanEnemyPrefab;
+        enemies[1] = sophmoreEnemyPrefab;
+        enemies[2] = juniorEnemyPrefab;
+        enemies[3] = seniorEnemyPrefab;
+
+    }
 
     void Update()
     {
@@ -27,24 +42,32 @@ public class WaveSpawner : MonoBehaviour
             countdown = timeBetweenWaves;
         }
         countdown -= Time.deltaTime;
+
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveCountDownText.text = Mathf.Floor(countdown).ToString();
+
     }
 
     IEnumerator SpawnWave()
     {
+        waveNumber++;
+        waveNumberText.text = waveNumber.ToString();
+
         for (int i = 0; i <= waveNumber; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            foreach (Transform enemy in enemies)
+            {
+                SpawnEnemy(juniorEnemyPrefab);
+                yield return new WaitForSeconds(0.5f);
+            }
         }
-
-        Debug.Log("Wave Incoming!");
-        waveNumber++;
 
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(Transform enemyPrefab)
     {
         enemyPrefab.tag = "Enemy";
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
     }
 }

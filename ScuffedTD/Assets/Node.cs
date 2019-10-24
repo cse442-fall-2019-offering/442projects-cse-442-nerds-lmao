@@ -7,7 +7,8 @@ public class Node : MonoBehaviour
     public Color transparent;
     public Color invalidColor;
 
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
 
     private SpriteRenderer rend;
     private Color startColor;
@@ -27,31 +28,43 @@ public class Node : MonoBehaviour
     {
         if (turret != null)
         {
-            Debug.Log("Can't build there");
             return;
         }
 
-        GameObject turretToBuild = buildManager.GetTurretToBuild();
+        if (!buildManager.CanBuild) {
+            rend.color = invalidColor;
+            return;
+        }
 
-        if (turretToBuild == null)
+        if (!buildManager.HasMoney)
         {
             rend.color = invalidColor;
+            return;
         }
 
-        else {
-            startColor = transparent;
-            hoverColor = transparent;
-            rend.color = transparent;
+        buildManager.BuildTurretOn(this);
 
-        }
-
-        turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
-
+        startColor = transparent;
+        hoverColor = transparent;
+        rend.color = transparent;
 
     }
 
     void OnMouseEnter()
     {
+        if (!buildManager.CanBuild)
+        {
+            rend.color = invalidColor;
+            return;
+        }
+
+        if (!buildManager.HasMoney)
+        {
+            rend.color = invalidColor;
+            return;
+        }
+
+
         rend.color = hoverColor;
     }
 
