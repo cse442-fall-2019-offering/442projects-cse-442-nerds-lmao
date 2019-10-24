@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4731167549251896668}
   - component: {fileID: 4731167549251896666}
   m_Layer: 5
-  m_Name: turretHug
+  m_Name: turretHughes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 10
-  fireRate: 2
-  damage: 1
+  fireRate: 3
+  damage: 25
   enemyTag: Enemy
   bulletPrefab: {fileID: 928129072219827494, guid: 4c4b2443635456b4cb9bd9116013b691,
     type: 3}

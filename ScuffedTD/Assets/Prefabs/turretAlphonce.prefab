@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4094387946658059845}
   - component: {fileID: 4094387946658059843}
   m_Layer: 5
-  m_Name: turretAlp
+  m_Name: turretAlphonce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 15
   fireRate: 1
-  damage: 1
+  damage: 20
   enemyTag: Enemy
   bulletPrefab: {fileID: 928129072219827494, guid: 4c4b2443635456b4cb9bd9116013b691,
     type: 3}
