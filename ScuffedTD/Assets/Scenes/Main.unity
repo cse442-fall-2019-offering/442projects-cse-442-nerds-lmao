@@ -7526,7 +7526,7 @@ MonoBehaviour:
   hertzTurret:
     prefab: {fileID: 3491552212750118185, guid: b759be59713ef4d4f91c316414ab5bd4,
       type: 3}
-    cost: 50
+    cost: 100
   hughesTurret:
     prefab: {fileID: 4731167549251896670, guid: d49d0f77ab3fda24bac46aa94f6c1cfd,
       type: 3}
@@ -7538,7 +7538,7 @@ MonoBehaviour:
   alphonceTurret:
     prefab: {fileID: 4094387946658059847, guid: 797eb7399de4e684f910865fd0934fdc,
       type: 3}
-    cost: 200
+    cost: 50
   hertzCost: {fileID: 1792271840}
   hughesCost: {fileID: 2073799044}
   rudraCost: {fileID: 1562081575}
@@ -8733,7 +8733,6 @@ GameObject:
   - component: {fileID: 618420560}
   - component: {fileID: 618420559}
   - component: {fileID: 618420558}
-  - component: {fileID: 618420561}
   m_Layer: 5
   m_Name: Cost
   m_TagString: Untagged
@@ -8802,19 +8801,6 @@ RectTransform:
   m_AnchoredPosition: {x: 63.20001, y: 0}
   m_SizeDelta: {x: 63.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &618420561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618420557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bedefe9a8b5609b419b0ab525c8d65f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 618420558}
 --- !u!1 &637995763
 GameObject:
   m_ObjectHideFlags: 0
@@ -11233,7 +11219,7 @@ PrefabInstance:
     - target: {fileID: 5128490127390266706, guid: 0422f72d92e6a994eab61c0fb5eab41b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9977
+      value: 4.0053
       objectReference: {fileID: 0}
     - target: {fileID: 5128490127390266706, guid: 0422f72d92e6a994eab61c0fb5eab41b,
         type: 3}
@@ -11288,7 +11274,7 @@ PrefabInstance:
     - target: {fileID: 5128490127390266706, guid: 0422f72d92e6a994eab61c0fb5eab41b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8902772
+      value: 0.88583136
       objectReference: {fileID: 0}
     - target: {fileID: 5128490127390266706, guid: 0422f72d92e6a994eab61c0fb5eab41b,
         type: 3}
@@ -12655,7 +12641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16aff96da4a3eb43bc1de4cc70db46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenWaves: 16
+  timeBetweenWaves: 11
   countdown: 11
   waveCountDownText: {fileID: 1760256515}
   waveNumberText: {fileID: 565779878}
@@ -12665,7 +12651,7 @@ MonoBehaviour:
     type: 3}
   juniorEnemyPrefab: {fileID: 7574085355651265587, guid: f94b1f2eb8a5745ceb0bceb856283cb7,
     type: 3}
-  seniorEnemyPrefab: {fileID: 7574085355651265587, guid: f94b1f2eb8a5745ceb0bceb856283cb7,
+  seniorEnemyPrefab: {fileID: 4998305812819381524, guid: aecea5d5f1cb34c669643b32cc25b236,
     type: 3}
   spawnPoint: {fileID: 2114569599}
   waveNumber: 1
@@ -12716,7 +12702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b79ae471952a749995859e95918ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 325
   startLives: 5
 --- !u!114 &1744488254
 MonoBehaviour:

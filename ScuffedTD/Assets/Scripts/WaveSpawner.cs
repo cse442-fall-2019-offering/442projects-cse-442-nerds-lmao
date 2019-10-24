@@ -1,6 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
+
+using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform juniorEnemyPrefab;
     public Transform seniorEnemyPrefab;
     public Transform spawnPoint;
-
+    private bool waveStarted = false;
 
 
     [SerializeField]
@@ -24,8 +26,9 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 0;
     Transform[] enemies = new Transform[4];
 
-    void Start() {
-        enemies[0] =freshmanEnemyPrefab;
+    void Start()
+    {
+        enemies[0] = freshmanEnemyPrefab;
         enemies[1] = sophmoreEnemyPrefab;
         enemies[2] = juniorEnemyPrefab;
         enemies[3] = seniorEnemyPrefab;
@@ -34,14 +37,32 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.GameIsOver) {
+        if (GameManager.GameIsOver)
+        {
             return;
         }
+
+        if (waveStarted & EnemiesAlive == 0)
+        {
+            waveNumber++;
+            waveNumberText.text = waveNumber.ToString();
+            countdown = timeBetweenWaves;
+            waveStarted = false;
+            return;
+        }
+
+        if (waveStarted)
+        {
+            return;
+        }
+
+
+
         if (countdown <= 0f)
         {
+            waveStarted = true;
             StartCoroutine(SpawnWave());
             SpawnWave();
-            countdown = timeBetweenWaves;
         }
         countdown -= Time.deltaTime;
 
@@ -52,18 +73,22 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        waveNumber++;
-        waveNumberText.text = waveNumber.ToString();
 
         for (int i = 0; i <= waveNumber; i++)
         {
-            foreach (Transform enemy in enemies)
-            {
-                SpawnEnemy(juniorEnemyPrefab);
-                yield return new WaitForSeconds(0.5f);
-            }
+            SpawnEnemy(enemies[Random.Range(0, 4)]);
+            yield return new WaitForSeconds(0.5f);
+
         }
 
+        for (int i = 0; i <= 20; i++)
+        {
+
+            if (Random.Range(0, 4) == 3)
+            {
+                Debug.Log("Annen");
+            }
+        }
     }
 
     void SpawnEnemy(Transform enemyPrefab)

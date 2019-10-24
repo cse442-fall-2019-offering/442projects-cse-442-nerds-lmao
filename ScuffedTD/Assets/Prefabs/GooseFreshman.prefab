@@ -276,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 1696159494025123432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.203986, y: -2.0784054, z: -120.65067}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 239357713}
   m_Father: {fileID: 0}
@@ -356,6 +356,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 9
   speed: 0
-  startHealth: 50
-  worth: 50
+  startHealth: 30
+  worth: 25
   healthBar: {fileID: 1821443408}
