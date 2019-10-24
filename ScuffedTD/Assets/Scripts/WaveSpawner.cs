@@ -34,7 +34,9 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-
+        if (GameManager.GameIsOver) {
+            return;
+        }
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -66,6 +68,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemyPrefab)
     {
+        EnemiesAlive++;
         enemyPrefab.tag = "Enemy";
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
 

@@ -28,7 +28,6 @@ public class BuildManager : MonoBehaviour
         }
 
         PlayerStats.Money -= turretToBuild.cost;
-        moneyText.text = PlayerStats.Money.ToString();
 
 
 
