@@ -20,10 +20,10 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
         buildManager.moneyText.text = PlayerStats.Money.ToString();
-        hertzCost.text = hertzTurret.getCost().ToString();
-        hughesCost.text = hughesTurret.getCost().ToString();
-        rudraCost.text = rudraTurret.getCost().ToString();
-        alphonceCost.text = alphonceTurret.getCost().ToString();
+        hertzCost.text = hertzTurret.cost.ToString();
+        hughesCost.text = hughesTurret.cost.ToString();
+        rudraCost.text = rudraTurret.cost.ToString();
+        alphonceCost.text = alphonceTurret.cost.ToString();
 
     }
 
