@@ -19,10 +19,13 @@ public class Enemy : MonoBehaviour
 
     private bool isDead = false;
 
+    BuildManager buildManager;
+
     void Start()
     {
         speed = startSpeed;
         health = startHealth;
+        buildManager = BuildManager.instance;
     }
 
     public void TakeDamage(float amount)
@@ -47,9 +50,8 @@ public class Enemy : MonoBehaviour
         isDead = true;
 
         PlayerStats.Money += worth;
-
+        buildManager.moneyText.text = PlayerStats.Money.ToString();
         WaveSpawner.EnemiesAlive--;
-
         Destroy(gameObject);
     }
 
