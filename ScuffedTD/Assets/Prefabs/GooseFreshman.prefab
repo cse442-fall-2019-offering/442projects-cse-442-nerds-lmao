@@ -239,11 +239,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 450fac8c405a6f448b5b119f36a8b2cc, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 8337435367843239074}
   - component: {fileID: 5080682816224366068}
   - component: {fileID: 1740174243}
+  - component: {fileID: 9101446347673459968}
   m_Layer: 0
   m_Name: GooseFreshman
   m_TagString: Enemy
@@ -341,4 +342,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a41b7071cbe84c988c4c9d82d9e9c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+--- !u!114 &9101446347673459968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696159494025123432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f825402f714aa2e45a6e281a619cd002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 9
+  speed: 0
+  startHealth: 50
+  worth: 50
+  healthBar: {fileID: 1821443408}

@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 4293446211183024273}
   - component: {fileID: 6222937069704365524}
   - component: {fileID: 981039687}
+  - component: {fileID: 7247467833585904386}
   m_Layer: 0
   m_Name: GooseSophomore
   m_TagString: Enemy
@@ -341,4 +342,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a41b7071cbe84c988c4c9d82d9e9c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+--- !u!114 &7247467833585904386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7783676540796872721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f825402f714aa2e45a6e281a619cd002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 8
+  speed: 0
+  startHealth: 150
+  worth: 70
+  healthBar: {fileID: 0}
