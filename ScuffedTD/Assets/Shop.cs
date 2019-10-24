@@ -2,34 +2,41 @@
 
 public class Shop : MonoBehaviour
 {
+
+    public TurretBlueprint hertzTurret;
+    public TurretBlueprint hughesTurret;
+    public TurretBlueprint rudraTurret;
+    public TurretBlueprint alphonceTurret;
+
     BuildManager buildManager;
 
     void Start()
     {
         buildManager = BuildManager.instance;
+        buildManager.moneyText.text = PlayerStats.Money.ToString();
     }
 
-    public void PurchaseHertzTurret()
+    public void SelectHertzTurret()
     {
-        buildManager.SetTurretToBuild(buildManager.HertzTurretPrefab);
-
-    }
-
-    public void PurchaseHughesTurret()
-    {
-        buildManager.SetTurretToBuild(buildManager.HughesTurretPrefab);
+        buildManager.SelectTurretToBuild(hertzTurret);
 
     }
 
-    public void PurchaseRudraTurret()
+    public void SelectHughesTurret()
     {
-        buildManager.SetTurretToBuild(buildManager.RudraTurretPrefab);
+        buildManager.SelectTurretToBuild(hughesTurret);
 
     }
 
-    public void PurchaseAlphonceTurret()
+    public void SelectRudraTurret()
     {
-        buildManager.SetTurretToBuild(buildManager.AlphonceTurretPrefab);
+        buildManager.SelectTurretToBuild(rudraTurret);
+
+    }
+
+    public void SelectAlphonceTurret()
+    {
+        buildManager.SelectTurretToBuild(alphonceTurret);
 
     }
 }
