@@ -140,11 +140,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 450fac8c405a6f448b5b119f36a8b2cc, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2117048396}
   - component: {fileID: 2117048395}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 7574085355651265587}
   - component: {fileID: 3478171211836235150}
   - component: {fileID: 202354444}
+  - component: {fileID: 1894935727285099503}
   m_Layer: 0
   m_Name: GooseJunior
   m_TagString: Enemy
@@ -275,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 9135422800647855426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -31.2, y: 5.2, z: 0}
-  m_LocalScale: {x: 1.4783, y: 1.4783, z: 1.4783}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.4783}
   m_Children:
   - {fileID: 2117048394}
   m_Father: {fileID: 0}
@@ -341,4 +342,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a41b7071cbe84c988c4c9d82d9e9c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+--- !u!114 &1894935727285099503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135422800647855426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f825402f714aa2e45a6e281a619cd002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 5
+  speed: 0
+  startHealth: 110
+  worth: 80
+  healthBar: {fileID: 1185199048}

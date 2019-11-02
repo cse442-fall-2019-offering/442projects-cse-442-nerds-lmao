@@ -1,32 +1,52 @@
 ﻿using UnityEngine;
+using System.Collections;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
-    
-    public float speed = 10f;
 
     private Transform target;
-    private int wavepointIndex = 0; //which wavepoint the enemy is pursuing
+    private int wavepointIndex = 0;
 
-    void Start(){
-    	target = WaypointsScript.points[0]; //might have to make deriviations of this script for future unique enemies
+    private Enemy enemy;
+
+    void Start()
+    {
+        enemy = GetComponent<Enemy>();
+
+        target = WaypointsScript.points[0];
     }
 
-    void Update(){
-    	Vector3 dir =  target.position - transform.position; //if one wavepoint has been reached, has to jump to the next wavepoint
-    	transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+    void Update()
+    {
+        Vector3 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 
-    	if(Vector3.Distance(transform.position, target.position) <= 0.2f){
-    		GetNextWaypoint();
-    	}
+        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        {
+            GetNextWaypoint();
+        }
+
+        enemy.speed = enemy.startSpeed;
     }
 
-    void GetNextWaypoint(){
-    	if(wavepointIndex >= WaypointsScript.points.Length - 1){
-    		Destroy(gameObject);
-    		return;
-    	}
-    	wavepointIndex++;
-    	target = WaypointsScript.points[wavepointIndex];
+    void GetNextWaypoint()
+    {
+        if (wavepointIndex >= WaypointsScript.points.Length - 1)
+        {
+            EndPath();
+            return;
+        }
+
+        wavepointIndex++;
+        target = WaypointsScript.points[wavepointIndex];
     }
+
+    void EndPath()
+    {
+        PlayerStats.Lives--;
+        WaveSpawner.EnemiesAlive--;
+        Destroy(gameObject);
+    }
+
 }
