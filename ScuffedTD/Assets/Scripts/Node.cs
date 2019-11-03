@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Node : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Node : MonoBehaviour
     [Header("Optional")]
     public GameObject turret;
 
+    private bool occupied;
     private SpriteRenderer rend;
     private Color startColor;
 
@@ -18,6 +20,7 @@ public class Node : MonoBehaviour
 
     void Start()
     {
+        occupied = false;
         rend = GetComponent<SpriteRenderer>();
         startColor = rend.color;
         buildManager = BuildManager.instance;
@@ -31,34 +34,38 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild) {
-            rend.color = invalidColor;
-            return;
-        }
-
-        if (!buildManager.HasMoney)
+        if (!buildManager.CanBuild && !occupied)
         {
             rend.color = invalidColor;
             return;
         }
 
-        buildManager.BuildTurretOn(this);
+        if (!buildManager.HasMoney && !occupied)
+        {
+            rend.color = invalidColor;
+            return;
+        }
 
-        startColor = transparent;
-        hoverColor = transparent;
-        rend.color = transparent;
+        if (buildManager.BuildTurretOn(this))
+        {
+            occupied = true;
+            startColor = transparent;
+            hoverColor = transparent;
+            rend.color = transparent;
+
+        }
 
     }
 
     void OnMouseEnter()
     {
-        if (!buildManager.CanBuild)
+        if (!buildManager.CanBuild && !occupied)
         {
             rend.color = invalidColor;
             return;
         }
 
-        if (!buildManager.HasMoney)
+        if (!buildManager.HasMoney && !occupied)
         {
             rend.color = invalidColor;
             return;
