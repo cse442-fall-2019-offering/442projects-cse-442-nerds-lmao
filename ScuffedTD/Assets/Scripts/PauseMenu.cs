@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public GameObject ui;
-    public int levelNumber;
+    public GameObject pauseMenu;
 
     void Update()
     {
@@ -25,9 +24,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Toggle()
     {
-        ui.SetActive(!ui.activeSelf);
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
 
-        if (ui.activeSelf)
+        if (pauseMenu.activeSelf)
         {
             Time.timeScale = 0f;
         }
@@ -46,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void Menu()
     {
         Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - levelNumber);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - PlayerStats.levelNumber);
     }
 
 }

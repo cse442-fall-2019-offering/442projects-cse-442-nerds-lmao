@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401707806629676096}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,8 @@ GameObject:
   - component: {fileID: 4094387946658059844}
   - component: {fileID: 4094387946658059845}
   - component: {fileID: 4094387946658059843}
-  m_Layer: 5
+  - component: {fileID: 1112976660245053062}
+  m_Layer: 0
   m_Name: turretAlphonce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.04, y: -0.16}
+  m_AnchoredPosition: {x: -13.039978, y: -0.16000366}
   m_SizeDelta: {x: -105.79999, y: -65.200806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &4094387946658059844
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b60cdec7ae23c1c459789cb3a74fa5b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,3 +162,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 928129072219827494, guid: 4c4b2443635456b4cb9bd9116013b691,
     type: 3}
   firePoint: {fileID: 3401707806629676096}
+--- !u!222 &1112976660245053062
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094387946658059847}
+  m_CullTransparentMesh: 0

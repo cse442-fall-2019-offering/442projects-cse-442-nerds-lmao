@@ -56,11 +56,6 @@ public class testTurret : MonoBehaviour
     void Update()
     {
 
-        if (GameManager.GameIsOver)
-        {
-            Destroy(gameObject);
-            return;
-        }
         if (target == null)
         {
             return;

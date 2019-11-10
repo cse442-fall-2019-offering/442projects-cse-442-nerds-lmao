@@ -2,8 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using System.Collections;
-
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
@@ -37,15 +35,15 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.GameIsOver)
-        {
-            return;
-        }
 
         if (waveStarted & EnemiesAlive == 0)
         {
             waveNumber++;
-            waveNumberText.text = waveNumber.ToString();
+            PlayerStats.Rounds = waveNumber;
+
+            if (waveNumber <= 10 & PlayerStats.Lives > 0) {
+                waveNumberText.text = waveNumber.ToString();
+            }
             countdown = timeBetweenWaves;
             waveStarted = false;
             return;
@@ -67,7 +65,11 @@ public class WaveSpawner : MonoBehaviour
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-        waveCountDownText.text = Mathf.Floor(countdown).ToString();
+
+        if (waveNumber <= 10 & PlayerStats.Lives > 0)
+        {
+            waveCountDownText.text = Mathf.Floor(countdown).ToString();
+        }
 
     }
 
@@ -81,14 +83,6 @@ public class WaveSpawner : MonoBehaviour
 
         }
 
-        for (int i = 0; i <= 20; i++)
-        {
-
-            if (Random.Range(0, 4) == 3)
-            {
-                Debug.Log("Annen");
-            }
-        }
     }
 
     void SpawnEnemy(Transform enemyPrefab)

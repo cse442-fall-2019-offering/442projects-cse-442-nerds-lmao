@@ -12,12 +12,15 @@ public class PlayerStats : MonoBehaviour
 
     public static int Rounds;
 
+    public static int levelNumber;
+    public int level = 1;
 
     void Start()
     {
         Money = startMoney;
         Lives = startLives;
         Rounds = 0;
+        levelNumber = level;
     }
 
 }

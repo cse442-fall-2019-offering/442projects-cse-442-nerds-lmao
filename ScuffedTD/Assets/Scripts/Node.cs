@@ -16,6 +16,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     private bool occupied;
     private Image img;
     private Color startColor;
+    private bool pressed = false;
 
     BuildManager buildManager;
 
@@ -28,6 +29,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         buildManager = BuildManager.instance;
 
     }
+
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -61,6 +63,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        pressed = true;
         if (!buildManager.CanBuild && !occupied)
         {
             img.color = invalidColor;
@@ -79,6 +82,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        pressed = false;
         img.color = startColor;
     }
 
