@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Node : MonoBehaviour
+public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
 
     public Color hoverColor;
@@ -12,7 +14,7 @@ public class Node : MonoBehaviour
     public GameObject turret;
 
     private bool occupied;
-    private SpriteRenderer rend;
+    private Image img;
     private Color startColor;
 
     BuildManager buildManager;
@@ -21,13 +23,13 @@ public class Node : MonoBehaviour
     void Start()
     {
         occupied = false;
-        rend = GetComponent<SpriteRenderer>();
-        startColor = rend.color;
+        img = GetComponent<Image>();
+        startColor = img.color;
         buildManager = BuildManager.instance;
 
     }
 
-    void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (turret != null)
         {
@@ -36,13 +38,13 @@ public class Node : MonoBehaviour
 
         if (!buildManager.CanBuild && !occupied)
         {
-            rend.color = invalidColor;
+            img.color = invalidColor;
             return;
         }
 
         if (!buildManager.HasMoney && !occupied)
         {
-            rend.color = invalidColor;
+            img.color = invalidColor;
             return;
         }
 
@@ -51,33 +53,33 @@ public class Node : MonoBehaviour
             occupied = true;
             startColor = transparent;
             hoverColor = transparent;
-            rend.color = transparent;
+            img.color = transparent;
 
         }
 
     }
 
-    void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         if (!buildManager.CanBuild && !occupied)
         {
-            rend.color = invalidColor;
+            img.color = invalidColor;
             return;
         }
 
         if (!buildManager.HasMoney && !occupied)
         {
-            rend.color = invalidColor;
+            img.color = invalidColor;
             return;
         }
 
 
-        rend.color = hoverColor;
+        img.color = hoverColor;
     }
 
-    void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        rend.color = startColor;
+        img.color = startColor;
     }
 
 }
