@@ -76,9 +76,9 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
 
-        for (int i = 0; i <= waveNumber; i++)
+        for (int i = 0; i <= waveNumber + PlayerPrefs.GetInt("difficulty", -1); i++)
         {
-            SpawnEnemy(enemies[Random.Range(0, 0)]);
+            SpawnEnemy(enemies[Random.Range(0, 4)]);
             yield return new WaitForSeconds(0.5f);
 
         }
@@ -92,11 +92,8 @@ public class WaveSpawner : MonoBehaviour
 
         Transform currentEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
 
-        currentEnemy.GetComponent<Enemy>().startSpeed += (float)(0.1 * waveNumber + 0.5 * PlayerPrefs.GetInt("difficulty", -1) + 0.25 * PlayerStats.levelNumber);
-        currentEnemy.GetComponent<Enemy>().startHealth += (float)(100 * PlayerPrefs.GetInt("difficulty", -1) + waveNumber * 20 + 50 * PlayerStats.levelNumber);
-
-        Debug.Log(currentEnemy.GetComponent<Enemy>().startSpeed);
-        Debug.Log(currentEnemy.GetComponent<Enemy>().startHealth);
+        currentEnemy.GetComponent<Enemy>().startSpeed += (float)(0.1 * waveNumber + 0.4 * PlayerPrefs.GetInt("difficulty", -1) + 0.2 * PlayerStats.levelNumber);
+        currentEnemy.GetComponent<Enemy>().startHealth += (float)(150 * PlayerPrefs.GetInt("difficulty", -1) + waveNumber * 20 + 50 * PlayerStats.levelNumber);
 
     }
 }
