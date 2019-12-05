@@ -6,16 +6,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-        {
-            Toggle();
-        }
-
-
-    }
-
     public void onClick()
     {
         Toggle();
