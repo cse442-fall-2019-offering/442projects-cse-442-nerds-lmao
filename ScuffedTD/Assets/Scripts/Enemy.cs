@@ -26,11 +26,6 @@ public class Enemy : MonoBehaviour
     }
 
     void Update() {
-        if (GameManager.GameIsOver)
-        {
-            Destroy(gameObject);
-            return;
-        }
 
     }
 
