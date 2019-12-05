@@ -20,6 +20,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     BuildManager buildManager;
 
 
+
     void Start()
     {
         occupied = false;
@@ -29,11 +30,29 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     }
 
+    public Vector3 GetBuildPosition()
+    {
+        Debug.Log(GetComponent<RectTransform>().position);
+        return GetComponent<RectTransform>().position;
+    }
+
+    /*
+    public void SellTurret ()
+    {
+        PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+        Destroy(turret);
+
+        turretBlueprint = null;
+
+    }
+    */
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (turret != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 
@@ -43,7 +62,7 @@ public class Node : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             return;
         }
 
-        if (!buildManager.HasMoney && !occupied)
+        if (!buildManager.GotMoney() && !occupied)
         {
             img.color = invalidColor;
             return;
