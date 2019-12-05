@@ -16333,6 +16333,14 @@ MonoBehaviour:
     type: 3}
   seniorEnemyPrefab: {fileID: 4998305812819381524, guid: aecea5d5f1cb34c669643b32cc25b236,
     type: 3}
+  pipeEnemyPrefab: {fileID: 4356954623334877299, guid: fcf4c6d2f24ab3144a69117c9df7842a,
+    type: 3}
+  coatEnemyPrefab: {fileID: 4226878159382548551, guid: 875045bbd9144ac4bb3be47869bfc5cd,
+    type: 3}
+  darkwingEnemyPrefab: {fileID: 8519590577228811029, guid: c602b57890de4074ea174e456bc42fd7,
+    type: 3}
+  snakeEnemyPrefab: {fileID: 8765772052143844774, guid: c9ef894278a73ed4e92f59d0b271c9c1,
+    type: 3}
   spawnPoint: {fileID: 2114569599}
   waveNumber: 1
 --- !u!4 &1744488251
@@ -22470,7 +22478,7 @@ PrefabInstance:
     - target: {fileID: 6814044881030258947, guid: 06071ebbd098e8147a344c25661c7958,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -184.29001
+      value: -184.29004
       objectReference: {fileID: 0}
     - target: {fileID: 6814044881030258947, guid: 06071ebbd098e8147a344c25661c7958,
         type: 3}

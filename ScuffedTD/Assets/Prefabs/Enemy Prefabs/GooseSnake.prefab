@@ -357,8 +357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 8.5
   speed: 0
-  startHealth: 700
-  worth: 300
+  startHealth: 1200
+  worth: 200
   healthBar: {fileID: 4394329727378136958}
 --- !u!82 &1637568403994690302
 AudioSource:
@@ -378,7 +378,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 50
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

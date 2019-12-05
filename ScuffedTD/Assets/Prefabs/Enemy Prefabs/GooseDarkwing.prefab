@@ -357,8 +357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 15
   speed: 0
-  startHealth: 200
-  worth: 200
+  startHealth: 500
+  worth: 100
   healthBar: {fileID: 3703690461827414477}
 --- !u!82 &1811610923038172237
 AudioSource:
