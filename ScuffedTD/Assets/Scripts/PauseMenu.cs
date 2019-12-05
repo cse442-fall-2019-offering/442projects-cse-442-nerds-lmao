@@ -5,7 +5,6 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenu;
-    public string levelName;
 
     public void onClick()
     {
@@ -41,7 +40,8 @@ public class PauseMenu : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(levelName);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 

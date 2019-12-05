@@ -17389,7 +17389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 7358065269075796531}
-  levelName: Level 3
 --- !u!114 &7358065269642694488
 MonoBehaviour:
   m_ObjectHideFlags: 0
