@@ -15,6 +15,10 @@ public class WaveSpawner : MonoBehaviour
     public Transform sophmoreEnemyPrefab;
     public Transform juniorEnemyPrefab;
     public Transform seniorEnemyPrefab;
+    public Transform pipeEnemyPrefab;
+    public Transform coatEnemyPrefab;
+    public Transform darkwingEnemyPrefab;
+    public Transform snakeEnemyPrefab;
     public Transform spawnPoint;
     private bool waveStarted = false;
 
@@ -22,7 +26,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]
 
     private int waveNumber = 0;
-    Transform[] enemies = new Transform[4];
+    Transform[] enemies = new Transform[11];
 
     void Start()
     {
@@ -30,6 +34,13 @@ public class WaveSpawner : MonoBehaviour
         enemies[1] = sophmoreEnemyPrefab;
         enemies[2] = juniorEnemyPrefab;
         enemies[3] = seniorEnemyPrefab;
+        enemies[4] = pipeEnemyPrefab;
+        enemies[5] = coatEnemyPrefab;
+        enemies[6] = darkwingEnemyPrefab;
+        enemies[7] = snakeEnemyPrefab;
+        enemies[8] = darkwingEnemyPrefab;
+        enemies[9] = darkwingEnemyPrefab;
+        enemies[10] = snakeEnemyPrefab;
 
     }
 
@@ -78,7 +89,7 @@ public class WaveSpawner : MonoBehaviour
 
         for (int i = 0; i <= waveNumber + PlayerPrefs.GetInt("difficulty", -1); i++)
         {
-            SpawnEnemy(enemies[Random.Range(0, 4)]);
+            SpawnEnemy(enemies[Random.Range(0, waveNumber)]);
             yield return new WaitForSeconds(0.5f);
 
         }
