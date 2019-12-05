@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenu;
+    public string levelName;
 
     public void onClick()
     {
@@ -35,7 +36,13 @@ public class PauseMenu : MonoBehaviour
     public void Menu()
     {
         Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - PlayerStats.levelNumber);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(levelName);
+
     }
 
 }
