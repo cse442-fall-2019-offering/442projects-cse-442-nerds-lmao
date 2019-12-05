@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6110896982468242042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6110896982468242040}
+  - component: {fileID: 6110896982468242041}
+  - component: {fileID: 6110896982468242047}
+  - component: {fileID: 6110896982468242046}
+  - component: {fileID: 6110896982468242045}
+  - component: {fileID: 6110896982468241923}
+  - component: {fileID: 6110896982468242044}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6110896982468242040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5027723, y: -7.271878, z: 118.289185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6110896982468242041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16aff96da4a3eb43bc1de4cc70db46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenWaves: 11
+  countdown: 11
+  waveCountDownText: {fileID: 0}
+  waveNumberText: {fileID: 0}
+  freshmanEnemyPrefab: {fileID: 8337435367843239074, guid: f14fa7dfaa6ff49fd8e60686cf0171cc,
+    type: 3}
+  sophmoreEnemyPrefab: {fileID: 4293446211183024273, guid: 7a6c8e96da042419498c558452c7805a,
+    type: 3}
+  juniorEnemyPrefab: {fileID: 7574085355651265587, guid: f94b1f2eb8a5745ceb0bceb856283cb7,
+    type: 3}
+  seniorEnemyPrefab: {fileID: 4998305812819381524, guid: aecea5d5f1cb34c669643b32cc25b236,
+    type: 3}
+  spawnPoint: {fileID: 0}
+  waveNumber: 1
+--- !u!114 &6110896982468242047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ac878010fb37e4997aedcf4f95d87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 0}
+  HertzTurretPrefab: {fileID: 3491552212750118185, guid: b759be59713ef4d4f91c316414ab5bd4,
+    type: 3}
+  HughesTurretPrefab: {fileID: 4731167549251896670, guid: d49d0f77ab3fda24bac46aa94f6c1cfd,
+    type: 3}
+  RudraTurretPrefab: {fileID: 7818693079825328384, guid: f17e2e71bbc92514da897a218a74858b,
+    type: 3}
+  AlphonceTurretPrefab: {fileID: 4094387946658059847, guid: 797eb7399de4e684f910865fd0934fdc,
+    type: 3}
+  turretToBuild:
+    prefab: {fileID: 0}
+    cost: 0
+  nodeUI: {fileID: 0}
+--- !u!114 &6110896982468242046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b79ae471952a749995859e95918ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 325
+  startLives: 5
+  level: 1
+--- !u!114 &6110896982468242045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2158f422be57cf943a3750d10c194822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}
+  gameWonUI: {fileID: 0}
+--- !u!114 &6110896982468241923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8183932ea1ad8c146bd15fca837e5f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsMenu: {fileID: 0}
+--- !u!114 &6110896982468242044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110896982468242042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7150610f3bcc3a54b8c906a09a97dccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
