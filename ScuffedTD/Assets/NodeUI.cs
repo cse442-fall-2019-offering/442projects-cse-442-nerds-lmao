@@ -6,9 +6,6 @@ public class NodeUI : MonoBehaviour
 
     public GameObject ui;
 
-    public Text upgradeCost;
-    public Button upgradeButton;
-
     public Text sellAmount;
     public Canvas canvas;
     private Node target;
@@ -31,12 +28,11 @@ public class NodeUI : MonoBehaviour
         ui.SetActive(false);
     }
 
-    /*
+
     public void Sell()
     {
         target.SellTurret();
         BuildManager.instance.DeselectNode();
     }
-    */
 
 }

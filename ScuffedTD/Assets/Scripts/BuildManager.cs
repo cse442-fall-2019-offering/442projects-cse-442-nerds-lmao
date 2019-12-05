@@ -16,7 +16,7 @@ public class BuildManager : MonoBehaviour
     public GameObject RudraTurretPrefab;
     public GameObject AlphonceTurretPrefab;
 
-    private TurretBlueprint turretToBuild;
+    public TurretBlueprint turretToBuild;
     private Node selectedNode;
     public NodeUI nodeUI;
 
@@ -50,9 +50,7 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
-        if (turretToBuild != null) {
-        DeselectNode();
-        }
+
     }
 
     public void SelectNode(Node node)
@@ -74,4 +72,8 @@ public class BuildManager : MonoBehaviour
         nodeUI.Hide();
     }
 
+    public TurretBlueprint GetTurretToBuild()
+    {
+        return turretToBuild;
+    }
 }
